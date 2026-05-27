@@ -1,0 +1,22 @@
+# Variáveis de ambiente (nunca subir chaves de API)
+.env
+
+# Dados dos clientes e relatórios gerados (não subir no repositório)
+data/
+output/
+*.xlsx
+*.pdf
+
+# Cache do Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Ambientes virtuais
+venv/
+.venv/
+env/
+
+# IDEs
+.vscode/
+.idea/
