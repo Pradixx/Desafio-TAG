@@ -1,4 +1,4 @@
-# TAG Investimentos — Desafio Técnico
+# TAG Investimentos - Desafio Técnico
 
 Script Python que lê uma planilha de clientes, analisa o perfil de risco de cada um usando IA e gera um relatório automatizado.
 
@@ -42,7 +42,7 @@ Abra o `.env` e preencha:
 
 ```
 GEMINI_API_KEY=sua_chave_aqui       # obtenha em: aistudio.google.com
-GROQ_API_KEY=sua_chave_aqui         # fallback — obtenha em: console.groq.com
+GROQ_API_KEY=sua_chave_aqui         # fallback - obtenha em: console.groq.com
 EMAIL_FROM=seu_email@gmail.com
 EMAIL_TO=destinatario@gmail.com
 EMAIL_PASSWORD=senha_de_app_gmail   # gere em: myaccount.google.com/apppasswords
@@ -91,7 +91,7 @@ O relatório será salvo em `output/relatorio.json` e enviado por e-mail.
 
 ### Separação do código em módulos
 
-A primeira decisão foi não colocar tudo em um único arquivo. Separei o código em três módulos com responsabilidades distintas (`dados.py`, `analise.py`, `relatorio.py`) orquestrados pelo `main.py`. Isso facilita a manutenção — se a API de IA mudar, só altero `analise.py`. Se o formato do relatório mudar, só altero `relatorio.py`. Cada parte pode ser testada e entendida de forma independente.
+A primeira decisão foi não colocar tudo em um único arquivo. Separei o código em três módulos com responsabilidades distintas (`dados.py`, `analise.py`, `relatorio.py`) orquestrados pelo `main.py`. Isso facilita a manutenção - se a API de IA mudar, só altero `analise.py`. Se o formato do relatório mudar, só altero `relatorio.py`. Cada parte pode ser testada e entendida de forma independente.
 
 ---
 
@@ -119,15 +119,15 @@ Se o perfil calculado não estiver entre os compatíveis com o objetivo, um aler
 
 ### Tratamento de inconsistências da planilha
 
-Antes de qualquer processamento, todos os dados passam pela função `validar_dados()`. A premissa adotada foi: **nunca ignorar silenciosamente um problema** — cada inconsistência é tratada de forma explícita e registrada no campo `avisos_qualidade_dados` do relatório.
+Antes de qualquer processamento, todos os dados passam pela função `validar_dados()`. A premissa adotada foi: **nunca ignorar silenciosamente um problema** - cada inconsistência é tratada de forma explícita e registrada no campo `avisos_qualidade_dados` do relatório.
 
 | Cliente | Problema identificado | Decisão tomada | Justificativa |
 |---|---|---|---|
 | Isabela Prado | `perc_cripto` nulo | Calculado como `100 - variavel - fixa = 5%` | Os outros percentuais eram válidos; a diferença é a estimativa mais conservadora possível |
-| Thiago Azevedo | `patrimonio_total` nulo | Mantido como nulo | Patrimônio não é usado na lógica de classificação de risco — não há como imputar sem distorcer |
+| Thiago Azevedo | `patrimonio_total` nulo | Mantido como nulo | Patrimônio não é usado na lógica de classificação de risco - não há como imputar sem distorcer |
 | Eduardo Fontes | `idade` nula | Mantido como nulo | Idade influencia o contexto mas não é determinante nas regras de classificação atuais; registrado para que o analista tenha ciência |
-| Sônia Brandão | 69 anos, `aposentadoria`, mas 75% variável + 10% cripto | Alerta gerado | Perfil calculado é arrojado — incompatível com o objetivo declarado |
-| Fernanda Queiroz | 60 anos, `preservacao`, mas 80% em cripto | Alerta gerado | Caso mais extremo da planilha — 80% em cripto é o oposto de preservação de patrimônio |
+| Sônia Brandão | 69 anos, `aposentadoria`, mas 75% variável + 10% cripto | Alerta gerado | Perfil calculado é arrojado - incompatível com o objetivo declarado |
+| Fernanda Queiroz | 60 anos, `preservacao`, mas 80% em cripto | Alerta gerado | Caso mais extremo da planilha - 80% em cripto é o oposto de preservação de patrimônio |
 | Carlos Uchoa | 45 anos, `aposentadoria`, mas 90% variável | Alerta gerado | Alta concentração em renda variável inconsistente com objetivo de aposentadoria |
 | Lucas Evangelista | 27 anos, `crescimento`, mas 5% variável e 90% renda fixa | Alerta gerado | Jovem com objetivo de crescimento mas carteira extremamente conservadora |
 
@@ -136,16 +136,16 @@ Antes de qualquer processamento, todos os dados passam pela função `validar_da
 ### Integração com IA
 
 **Por que usar IA para o resumo?**
-As regras determinísticas classificam o perfil, mas não produzem texto natural. A IA foi usada especificamente para transformar os dados estruturados em um parágrafo compreensível para um gestor — sem substituir a lógica de negócio, que permanece no código Python.
+As regras determinísticas classificam o perfil, mas não produzem texto natural. A IA foi usada especificamente para transformar os dados estruturados em um parágrafo compreensível para um gestor - sem substituir a lógica de negócio, que permanece no código Python.
 
 **Por que separar a lógica de classificação da IA?**
-Deliberadamente mantive a classificação (`conservador/moderado/arrojado`) e os alertas no código Python, e não delegado para a IA. Isso garante resultados determinísticos e auditáveis — a IA pode "inventar" ou variar, o código Python não.
+Deliberadamente mantive a classificação (`conservador/moderado/arrojado`) e os alertas no código Python, e não delegado para a IA. Isso garante resultados determinísticos e auditáveis - a IA pode "inventar" ou variar, o código Python não.
 
 **Prompt engineering:**
-O prompt enviado à IA inclui todos os dados do cliente, o perfil já calculado, o alerta (se houver) e os avisos de qualidade dos dados. Ao informar o perfil calculado no prompt, a IA não precisa reclassificar — ela foca em redigir o resumo com base em informações já processadas.
+O prompt enviado à IA inclui todos os dados do cliente, o perfil já calculado, o alerta (se houver) e os avisos de qualidade dos dados. Ao informar o perfil calculado no prompt, a IA não precisa reclassificar - ela foca em redigir o resumo com base em informações já processadas.
 
 **Resiliência com fallback:**
-O script tenta o **Groq** primeiro. Se a chamada falhar por qualquer motivo (chave inválida, rate limit, modelo indisponível), tenta o **Gemini**. Se ambos falharem, o resumo recebe uma mensagem informativa e a execução **continua normalmente** para os demais clientes — um erro em um cliente não interrompe o processamento dos outros 19.
+O script tenta o **Groq** primeiro. Se a chamada falhar por qualquer motivo (chave inválida, rate limit, modelo indisponível), tenta o **Gemini**. Se ambos falharem, o resumo recebe uma mensagem informativa e a execução **continua normalmente** para os demais clientes - um erro em um cliente não interrompe o processamento dos outros 19.
 
 **Pausa entre chamadas:**
 Foi adicionada uma pausa de 4 segundos entre cada chamada à API (`time.sleep(4)`) para respeitar o limite de tokens por minuto do free tier. Com 20 clientes, o processamento completo leva cerca de 80 segundos.
@@ -155,7 +155,7 @@ Foi adicionada uma pausa de 4 segundos entre cada chamada à API (`time.sleep(4)
 ### Formato do relatório
 
 Optei por **JSON** em vez de `.txt` por três motivos:
-1. É estruturado — pode ser consumido por outros sistemas futuramente
+1. É estruturado - pode ser consumido por outros sistemas futuramente
 2. Facilita a leitura programática (filtrar só os alertas, por exemplo)
 3. Preserva os tipos de dados (null para ausência de alerta, lista para avisos)
 
@@ -165,4 +165,4 @@ Optei por **JSON** em vez de `.txt` por três motivos:
 
 - Chaves de API ficam exclusivamente no arquivo `.env`, que está no `.gitignore`
 - O `.env.example` documenta quais variáveis são necessárias sem expor valores reais
-- A planilha de clientes (`data/`) e os relatórios gerados (`output/`) também estão no `.gitignore` — dados de clientes nunca sobem para o repositório
+- A planilha de clientes (`data/`) e os relatórios gerados (`output/`) também estão no `.gitignore` - dados de clientes nunca sobem para o repositório
