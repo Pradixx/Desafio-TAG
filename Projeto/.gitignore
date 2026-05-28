@@ -4,6 +4,7 @@
 # Dados dos clientes e relatórios gerados (não subir no repositório)
 data/
 output/
+Desafio/
 *.xlsx
 *.pdf
 
