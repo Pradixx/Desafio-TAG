@@ -86,7 +86,7 @@ def gerar_resumo_ia(cliente: dict, perfil: str, alerta: str | None, avisos: list
         try:
             cliente_groq = Groq(api_key=groq_key)
             resposta = cliente_groq.chat.completions.create(
-                model="llama3-8b-8192",
+                model="llama-3.1-8b-instant",
                 messages=[{"role": "user", "content": prompt}],
             )
             return resposta.choices[0].message.content.strip()
