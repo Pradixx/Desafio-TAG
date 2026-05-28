@@ -7,16 +7,17 @@ Script Python que lê uma planilha de clientes, analisa o perfil de risco de cad
 ## Estrutura do projeto
 
 ```
-Desafio_TAG/
-├── src/
-│   ├── dados.py           # leitura e validação da planilha
-│   ├── analise.py         # classificação de risco e chamada à IA
-│   └── relatorio.py       # geração do JSON e envio por e-mail
-├── data/                  # coloque a planilha aqui (não sobe no git)
-├── output/                # relatório gerado (não sobe no git)
-├── main.py                # script principal
-├── .env.example           # template das variáveis de ambiente
-├── requirements.txt
+Desafio-TAG/
+├── Projeto/
+│   ├── src/
+│   │   ├── dados.py           # leitura e validação da planilha
+│   │   ├── analise.py         # classificação de risco e chamada à IA
+│   │   └── relatorio.py       # geração do JSON e envio por e-mail
+│   ├── data/                  # coloque a planilha aqui (não sobe no git)
+│   ├── output/                # relatório gerado
+│   ├── main.py                # script principal
+│   ├── .env.example           # template das variáveis de ambiente
+│   └── requirements.txt
 └── README.md
 ```
 
@@ -24,13 +25,20 @@ Desafio_TAG/
 
 ## Como rodar
 
-### 1. Instale as dependências
+### 1. Clone o repositório e entre na pasta do projeto
+
+```bash
+git clone https://github.com/Pradixx/Desafio-TAG.git
+cd Desafio-TAG/Projeto
+```
+
+### 2. Instale as dependências
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Configure as variáveis de ambiente
+### 3. Configure as variáveis de ambiente
 
 Copie o arquivo de exemplo e preencha com suas chaves:
 
@@ -50,13 +58,13 @@ EMAIL_PASSWORD=senha_de_app_gmail   # gere em: myaccount.google.com/apppasswords
 
 > Para o Gmail, use uma **Senha de App** (não a senha normal da conta).
 
-### 3. Coloque a planilha na pasta correta
+### 4. Coloque a planilha na pasta correta
 
 ```
-data/clientes_TAG.xlsx
+Projeto/data/clientes_TAG.xlsx
 ```
 
-### 4. Execute
+### 5. Execute
 
 ```bash
 python main.py
