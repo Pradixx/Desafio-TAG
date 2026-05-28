@@ -1,3 +1,5 @@
+import time
+
 from src.dados import carregar_planilha, validar_dados
 from src.analise import classificar_perfil, gerar_alerta, gerar_resumo_ia
 from src.relatorio import gerar_relatorio, salvar_relatorio, enviar_email
@@ -37,6 +39,9 @@ def main():
 
         # Chama a IA para gerar o resumo em linguagem natural
         resumo = gerar_resumo_ia(cliente, perfil, alerta, avisos_cliente)
+
+        # Pausa entre chamadas para respeitar o limite de tokens por minuto do free tier
+        time.sleep(4)
 
         resultados.append({
             "nome": nome,
