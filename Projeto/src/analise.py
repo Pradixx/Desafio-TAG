@@ -76,22 +76,11 @@ def _montar_prompt(cliente: dict, perfil: str, alerta: str | None, avisos: list)
 def gerar_resumo_ia(cliente: dict, perfil: str, alerta: str | None, avisos: list) -> str:
     """
     Envia os dados do cliente para a IA e retorna o resumo gerado.
-    Tenta o Gemini primeiro; se falhar, tenta o Groq como fallback.
+    Tenta o Groq primeiro; se falhar, tenta o Gemini como fallback.
     """
     prompt = _montar_prompt(cliente, perfil, alerta, avisos)
 
-    # --- Tentativa 1: Gemini ---
-    gemini_key = os.getenv("GEMINI_API_KEY")
-    if gemini_key:
-        try:
-            genai.configure(api_key=gemini_key)
-            modelo = genai.GenerativeModel("gemini-2.0-flash-lite")
-            resposta = modelo.generate_content(prompt)
-            return resposta.text.strip()
-        except Exception as e:
-            print(f"  Gemini falhou para {cliente['nome']}: {e}. Tentando Groq...")
-
-    # --- Tentativa 2: Groq (fallback) ---
+    # --- Tentativa 1: Groq ---
     groq_key = os.getenv("GROQ_API_KEY")
     if groq_key:
         try:
@@ -102,7 +91,18 @@ def gerar_resumo_ia(cliente: dict, perfil: str, alerta: str | None, avisos: list
             )
             return resposta.choices[0].message.content.strip()
         except Exception as e:
-            print(f"  Groq também falhou para {cliente['nome']}: {e}")
+            print(f"  Groq falhou para {cliente['nome']}: {e}. Tentando Gemini...")
+
+    # --- Tentativa 2: Gemini (fallback) ---
+    gemini_key = os.getenv("GEMINI_API_KEY")
+    if gemini_key:
+        try:
+            genai.configure(api_key=gemini_key)
+            modelo = genai.GenerativeModel("gemini-2.0-flash-lite")
+            resposta = modelo.generate_content(prompt)
+            return resposta.text.strip()
+        except Exception as e:
+            print(f"  Gemini também falhou para {cliente['nome']}: {e}")
 
     # --- Fallback final: sem IA disponível ---
     return "[Resumo indisponível: nenhuma API de IA configurada ou ambas falharam]"
