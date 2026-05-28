@@ -1,0 +1,153 @@
+{
+  "gerado_em": "28/05/2026 17:04",
+  "total_clientes": 20,
+  "total_alertas": 7,
+  "clientes": [
+    {
+      "nome": "Ana Luiza Ferreira",
+      "perfil_risco": "conservador",
+      "resumo": "Ana Luiza Ferreira é uma cliente com perfil de investidor conservador, com 62 anos de idade e um patrimônio total de R$ 4,5 milhões. O seu portfólio é composto por 88% de renda fixa, demonstrando uma tendência de priorizar estabilidade financeira. Além disso, o seu objetivo é se aposentar, o que reforça a necessidade de uma abordagem conservadora para gerenciar seus investimentos. O alerta é que, com apenas 2% em criptoativos, talvez seja prudente revisar a alocação para diversificar e reduzir exposição, mas sem comprometer o perfil conservador.\n\nou então \n\n\"Ana Luiza Ferreira é uma cliente com perfil de investidor conservador, com 62 anos de idade e um patrimônio total de R$ 4,5 milhões. O seu portfólio é composto por 88% de renda fixa, demonstrando uma tendência de priorizar estabilidade financeira, e apenas 2% em criptoativos. O alerta é que, apesar do perfil, o investimento em cripto pode apresentar exposição a altos riscos e talvez seja prudente revisar a alocação para diversificar e reduzir exposição\"",
+      "alerta": null,
+      "avisos_qualidade_dados": []
+    },
+    {
+      "nome": "Roberto Menezes",
+      "perfil_risco": "conservador",
+      "resumo": "O perfil do cliente Roberto Menezes é caracterizado como conservador, com um patrimônio total de R$ 8,2 milhões. Com 58 anos, seu objetivo principal é a preservação dos recursos, o que é reforçado pela alta participação de renda fixa (83%) em seu portfólio. Dado o perfil de risco calculado como conservador, não há alertas no perfil de investimentos do cliente.",
+      "alerta": null,
+      "avisos_qualidade_dados": []
+    },
+    {
+      "nome": "Camila Drummond",
+      "perfil_risco": "arrojado",
+      "resumo": "Camila Drummond é uma cliente com perfil de investidor arrojado, com um patrimônio total de R$ 1.200.000, de acordo com suas declarações. Sua carteira de investimentos é composta por 35% de renda fixa, 60% de renda variável e 5% de criptomoedas, indicando uma inclinação para o crescimento e tolerância ao risco. Lembre-se de que investir em criptomoedas envolve um alto nível de risco, por isso é importante estar ciente dos impactos potenciais em seu patrimônio. **Atenção especial**: o alto peso de criptomoedas na carteira de Camila deve ser monitorado cuidadosamente para evitar perdas excessivas.",
+      "alerta": null,
+      "avisos_qualidade_dados": []
+    },
+    {
+      "nome": "Felipe Assuncao",
+      "perfil_risco": "moderado",
+      "resumo": "O perfil do cliente Felipe Assunção caracteriza-se como investidor com um patrimônio total de R$ 3,100,000 e objetivos de crescimento. A sua carteira atual apresenta diversificação razoável com destaque para a componente de renda fixa, 50% do seu ativo total, seguida pela renda variável, 45%. A sua participação em criptomoedas é limitada, apenas 5%. O risco calculado como moderado aponta para uma postura defensiva, mas ainda há oportunidades de investir em ativos de crescimento, alerta para uma possível realocação de ativos para ajustar a carteira e otimizar o retorno das aplicações.",
+      "alerta": null,
+      "avisos_qualidade_dados": []
+    },
+    {
+      "nome": "Mariana Teixeira",
+      "perfil_risco": "conservador",
+      "resumo": "A cliente Mariana Teixeira apresenta um perfil conservador, conforme resultado do cálculo de risco. Com R$ 12 milhões em patrimônio total, sua renda está dividida principalmente entre renda fixa, com 90%, e renda variável com 8%. A composição com criptomoedas é mínima, com apenas 2% em seu portfólio, o que destaca a necessidade de revisitar essa decisão, em especial considerando o seu perfil de conservador.",
+      "alerta": null,
+      "avisos_qualidade_dados": []
+    },
+    {
+      "nome": "Gustavo Leal",
+      "perfil_risco": "arrojado",
+      "resumo": "O perfil do cliente Gustavo Leal é caracterizado por uma orientação agressiva e focada em crescimento, com uma participação significativa de ativos de risco em sua carteira (70% de renda variável). Apesar do patrimônio total de R$ 450,000, sua idade relativamente jovem (29 anos) suporta essa abordagem de investimento arriscada. É importante manter um olho de pé de olho para o alerta, pois esse perfil de risco poderá potencialmente gerar resultados mais voláteis e, em certo casos, negativos.",
+      "alerta": null,
+      "avisos_qualidade_dados": []
+    },
+    {
+      "nome": "Beatriz Nogueira",
+      "perfil_risco": "moderado",
+      "resumo": "\"Considerando o perfil do cliente Beatriz Nogueira, podemos observar que ela tem um patrimônio total de R$ 6,7 milhões. A sua alocação é composta por 20% de renda variável e 2% de criptomoedas, o que não é muito alto, mas ainda assim elevado em relação à sua declaração de objetivo de preservação. Notamos que a alocação em renda fixa é de 78%, o que aparentemente reflete o objetivo de preservação. No entanto, o alerta de perfil calculado 'moderado' contrasta com a expectativa de uma alocação mais conservadora, sugerindo que a reavaliação da alocação com o cliente é necessária para garantir uma compatibilidade entre os objetivos e a real alocação.\"",
+      "alerta": "ALERTA: perfil calculado é 'moderado', mas o objetivo declarado é 'preservacao' (esperado: conservador). Revisar alocação com o cliente.",
+      "avisos_qualidade_dados": []
+    },
+    {
+      "nome": "Henrique Carvalho",
+      "perfil_risco": "arrojado",
+      "resumo": "O cliente Henrique Carvalho é um investidor experiente com patrimônio total de R$ 2,8 milhões. Seu perfil de investimento apresenta uma alocação de risco moderada, com 50% em renda variável, 45% em renda fixa e 5% em criptomoedas. Essa estrutura sugere que o cliente está disposto a admitir um nível de risco mais elevado em busca do crescimento de seus investimentos. Portanto, sugerimos uma monitorização cuidadosa das suas posições para evitar perdas significativas.",
+      "alerta": null,
+      "avisos_qualidade_dados": []
+    },
+    {
+      "nome": "Patricia Vilela",
+      "perfil_risco": "conservador",
+      "resumo": "A paciente Patricia Vilela possui um perfil de cliente conservador, com 71 anos de idade e um patrimônio total de R$ 9,5 milhões. Sua carteira é predominantemente composta por renda fixa, com 93% do seu patrimônio investido, e uma pequena parcela em criptomoedas, o que indica uma abordagem prudente. É importante alertar Patricia sobre a necessidade de ajustar sua carteira para atender às necessidades específicas de sua fase de vida, como a obtenção de retorno suficiente para a manutenção da qualidade de vida na aposentadoria.",
+      "alerta": null,
+      "avisos_qualidade_dados": []
+    },
+    {
+      "nome": "Andreia Monteiro",
+      "perfil_risco": "arrojado",
+      "resumo": "\"Considerando a perfil de risco arrojado e os objetivos de crescimento da Sra. Andreia Monteiro, podemos identificar uma cliente agressiva e disposta a assumir riscos. Com 65% de renda variável, 28% de renda fixa e 7% em criptomoedas, sua carteira reflete uma abordagem de investimento proativa, buscando ganhos a longo prazo. No entanto, é importante emitir um alerta sobre a concentração em ativos de risco, o que pode gerar perdas significativas em caso de mercado negativo.\"",
+      "alerta": null,
+      "avisos_qualidade_dados": []
+    },
+    {
+      "nome": "Sonia Brandao",
+      "perfil_risco": "arrojado",
+      "resumo": "A análise do perfil de investimento de Sonia Brandão indicou uma alocação ativa dos ativos, com 75% de renda variável, 15% de renda fixa e 10% em criptoativos. O seu patrimônio total é de R$ 3.200.000 e o objetivo declarado é a realização da aposentadoria. No entanto, o perfil de risco calculado é considerado \"arrojado\", o que pode não ser apropriado para um objetivo de longo prazo como a aposentadoria, levando a necessidade de revisar a alocação de ativos com a cliente para evitar potenciais riscos.",
+      "alerta": "ALERTA: perfil calculado é 'arrojado', mas o objetivo declarado é 'aposentadoria' (esperado: conservador ou moderado). Revisar alocação com o cliente.",
+      "avisos_qualidade_dados": []
+    },
+    {
+      "nome": "Lucas Evangelista",
+      "perfil_risco": "conservador",
+      "resumo": "O cliente Lucas Evangelista é um indivíduo com uma idade de 27 anos, possuindo um patrimônio total de R$ 320.000. Sua carteira atual é composta por 5% de investimentos em criptomoedas, 90% em renda fixa e 5% em renda variável. No entanto, surge um alerta de incompatibilidade entre o perfil de risco calculado para o cliente, classificado como conservador, e seu objetivo declarado de crescimento. Neste caso, é fundamental rever a alocação do portfólio com o cliente, considerando a necessidade de uma abordagem mais agressiva para atingir seu objetivo de crescimento.",
+      "alerta": "ALERTA: perfil calculado é 'conservador', mas o objetivo declarado é 'crescimento' (esperado: moderado ou arrojado). Revisar alocação com o cliente.",
+      "avisos_qualidade_dados": []
+    },
+    {
+      "nome": "Fernanda Queiroz",
+      "perfil_risco": "arrojado",
+      "resumo": "Fernanda Queiroz é uma cliente com um patrimônio total de R$ 5.100.000, apresentando um perfil de risco calculado como arrojado, o que é caracterizado por investimentos de alto risco, como cripto (80%). Esta alocação contrasta com o objetivo declarado de preservação, o que sugere que a cliente está em desacordo com sua própria estratégia de investimento. É importante revisar a alocação com a cliente para garantir uma compatibilidade entre o perfil de risco e o objetivo declarado.",
+      "alerta": "ALERTA: perfil calculado é 'arrojado', mas o objetivo declarado é 'preservacao' (esperado: conservador). Revisar alocação com o cliente.",
+      "avisos_qualidade_dados": []
+    },
+    {
+      "nome": "Carlos Uchoa",
+      "perfil_risco": "arrojado",
+      "resumo": "\"O perfil do cliente Carlos Uchoa apresenta-se como altamente arrojado, com 90% de sua renda variável investida, elevado risco em seu portfólio. Esse perfil não condiz com sua declaração de objetivo de aposentadoria, o que geralmente requer uma abordagem mais conservadora ou moderada. É fundamental revisar a alocação ativa de seus recursos com ele para garantir que suas metas sejam alcançadas de maneira estável e sustentável.\"",
+      "alerta": "ALERTA: perfil calculado é 'arrojado', mas o objetivo declarado é 'aposentadoria' (esperado: conservador ou moderado). Revisar alocação com o cliente.",
+      "avisos_qualidade_dados": []
+    },
+    {
+      "nome": "Isabela Prado",
+      "perfil_risco": "arrojado",
+      "resumo": "A cliente Isabela Prado é uma investidora experiente com patrimônio total de R$ 2,4 milhões. Sua carteira é composta por 55% de renda variável, 40% de renda fixa e 5% de criptoativos. Considerando o perfil de risco calculado como arrojado, recomendamos uma política de investimento agressiva, focada no crescimento financeiro. Além disso, é importante monitorar o desempenho dos criptoativos e reavaliar a percentagem investida nesse ativo, considerando a volatilidade associada a esse mercado.",
+      "alerta": null,
+      "avisos_qualidade_dados": [
+        "perc_cripto estava nulo — imputado como 5%"
+      ]
+    },
+    {
+      "nome": "Thiago Azevedo",
+      "perfil_risco": "moderado",
+      "resumo": "Considerando o perfil detalhado do cliente Thiago Azevedo, observamos que um homem de 52 anos com patrimônio total em R$ não informado, com composição de ativos que inclui 30% de renda variável, 65% de renda fixa e 5% de criptomoedas.\n\nSintetizando o perfil de risco calculado como moderado e o objetivo declarado como preservação, existe uma incongruência que merece uma reavaliação. Este cenário sugere que a alocação atual pode não estar alinhada com os desejos de longo prazo de Thiago.\n\n**Alerta**: O perfil calculado é 'moderado', mas o objetivo declarado é 'preservação', indicando uma discrepância que deve ser revisada com o cliente.",
+      "alerta": "ALERTA: perfil calculado é 'moderado', mas o objetivo declarado é 'preservacao' (esperado: conservador). Revisar alocação com o cliente.",
+      "avisos_qualidade_dados": [
+        "patrimônio total não informado"
+      ]
+    },
+    {
+      "nome": "Renata Magalhaes",
+      "perfil_risco": "moderado",
+      "resumo": "\"Renata Magalhaes é uma cliente com patrimônio total de R$ 4,1 milhões, caracterizando-se por um perfil de investidor conservador com objetivos de crescimento. A composição de sua carteira de investimentos é composta por 40% de renda variável, 55% de renda fixa e 5% de criptomoedas. Considerando o perfil de risco moderado calculado, é importante monitorar a proporção da carteira de investimentos em criptomoedas, pois pode representar um alerta de sobreexposição a essa classe de ativos de alto risco.\"",
+      "alerta": null,
+      "avisos_qualidade_dados": []
+    },
+    {
+      "nome": "Eduardo Fontes",
+      "perfil_risco": "moderado",
+      "resumo": "A análise do perfil do cliente Eduardo Fontes apresenta-se parcial devido à falta de informação sobre sua idade, o que pode influenciar no delineamento do planejamento financeiro adequado. No entanto, com base nos dados disponíveis, podemos inferir que o cliente é um investidor experiente, com patrimônio de R$ 7,3 milhões e uma exposição moderada ao risco, tendo em vista o perfil de risco calculado como moderado. A estratégia de investimento atualmente adotada pelo cliente está focada em renda fixa, com 75% de sua carteira investida nesse segmento, além de uma pequena parcela em criptomônias e 20% em renda variável. É importante monitorar esse perfil para garantir que ele esteja alinhado com o objetivo de aposentadoria do cliente.",
+      "alerta": null,
+      "avisos_qualidade_dados": [
+        "idade não informada — análise de perfil será parcial"
+      ]
+    },
+    {
+      "nome": "Juliana Sampaio",
+      "perfil_risco": "arrojado",
+      "resumo": "\"Já analisamos o perfil de Juliana Sampaio, uma cliente de 31 anos com patrimônio total de R$ 890.000. Suas carteiras mostram exposição de 60% em renda variável, 30% em renda fixa e 10% em criptomônias, o que justifica a classificação de perfil de risco como arrojado. Como a sua principal meta é alcançar o crescimento financeiro, recomendamos a monitorização constante e a adaptação das estratégias de investimento de acordo com as mudanças do mercado, evitando o risco de sobreposição.\"",
+      "alerta": null,
+      "avisos_qualidade_dados": []
+    },
+    {
+      "nome": "Marcos Pinheiro",
+      "perfil_risco": "moderado",
+      "resumo": "\"Marcos Pinheiro, cliente de 57 anos, possui um patrimônio total de R$ 5.600.000 e uma estratégia de investimento diversificada, com 25% em renda variável, 70% em renda fixa e 5% em criptomoedas. De acordo com nosso cálculo, o perfil de risco de Marcos é classificado como moderado. No entanto, ao analisar seu objetivo declarado, verificamos que ele buscou a preservação do patrimônio, o que sugere que uma alocação conservadora seria mais apropriada. Revisamos, portanto, a alocação atual com o objetivo de harmonizá-la com as metas de nosso cliente.\"",
+      "alerta": "ALERTA: perfil calculado é 'moderado', mas o objetivo declarado é 'preservacao' (esperado: conservador). Revisar alocação com o cliente.",
+      "avisos_qualidade_dados": []
+    }
+  ]
+}

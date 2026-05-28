@@ -1,9 +1,8 @@
 # Variáveis de ambiente (nunca subir chaves de API)
 .env
 
-# Dados dos clientes e relatórios gerados (não subir no repositório)
+# Dados dos clientes (não subir no repositório)
 data/
-output/
 Desafio/
 *.xlsx
 *.pdf
