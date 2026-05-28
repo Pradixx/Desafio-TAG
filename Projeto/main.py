@@ -1,6 +1,6 @@
-from src.dados import carregar_planilha, validar_dados
-from src.analise import classificar_perfil, gerar_alerta, gerar_resumo_ia
-from src.relatorio import gerar_relatorio, salvar_relatorio, enviar_email
+from Projeto.src.dados import carregar_planilha, validar_dados
+from Projeto.src.analise import classificar_perfil, gerar_alerta, gerar_resumo_ia
+from Projeto.src.relatorio import gerar_relatorio, salvar_relatorio, enviar_email
 
 # Caminhos dos arquivos
 CAMINHO_PLANILHA = "data/clientes_TAG.xlsx"
